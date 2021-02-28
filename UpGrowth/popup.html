@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="task.css" />
+    <link rel="stylesheet" href="styles.css">
+    <title>UpGrowth</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+       href="https://fonts.googleapis.com/css?family=Montserrat:b,bi,i,100,300,400,500,600,800"
+    />
+    <style>
+
+      .music {
+        position: absolute;
+        top: 45%;
+        right: 20%;
+        margin: 0 auto;
+      }
+
+      .btn {
+        background-color: transparent;
+        color: red;
+        font-size: 50px;
+        border: none;
+        display: block;
+        margin: 0 auto;
+        opacity: 0.3;
+        transition: all linear 0.2s;
+      }
+
+      .btn:hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>UpGrowth</h1>
+    <div id="reminder-div">
+      <div class="music">
+        <audio id="softMusic" src="song/music.mp3" loop=""></audio>
+          <button class="fa fa-play-circle-o" id="play-circle"></button>
+          <button class="fa fa-pause-circle-o" id="pause-circle"></button>
+      </div>
+      <form id="reminder">
+        <label for="set-reminder-name">Reminder Name:</label>
+        <input name="set-reminder-name" value="" id="reminder-name" required>
+        <label for="set-date">Reminder Due Date:</label>
+        <input name="set-date" type="date" id="reminder-date" required>
+        <button type="submit" name="submit">Set Reminder</button> <button id="clear-reminders">Clear reminders</button>
+      </form>
+      
+      <div id="current-reminders-div">
+        <span>Current Reminders:</span>
+        <ul id="current-reminders"></ul>
+      </div>
+    </div>
+    <div class = "center-notes">
+    <textarea id="notes" placeholder="Write your tasks here..." style="margin: 50px 170px 0px 0px; width: 360px; height: 225px;"></textarea>
+  </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
